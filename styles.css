@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+/* heading */
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(252, 247, 194);
+  color: rgb(31, 30, 30);
+  height: 70px;
+}
+/* heading */
+/* budget section start */
+.budgetAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 20px auto;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.budgetAmount button {
+  width: 20%;
+  height: 30px;
+  border-style: none;
+  color: rgb(31, 30, 30);
+  background-color: rgb(252, 247, 194);
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.budgetAmount input {
+  border-radius: 10px;
+  height: 40px;
+  border-style: none;
+  background-color: whitesmoke;
+  width: 80%;
+}
+/* budget section  end*/
+
+/* centerInfoSection */
+.centerInfoSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: whitesmoke;
+}
+.innerCenterInfoSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.innerCenterInfoSection p {
+  margin: 0px 10px;
+}
+/* centerInfoSection */
+
+/* button for mudal  */
+.openMudalBtn button {
+  margin: 20px 20px;
+  width: 300px;
+  height: 40px;
+  border-style: none;
+  color: rgb(31, 30, 30);
+  background-color: rgb(252, 247, 194);
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+/* button for mudal  */
+/* moudal */
+.moudal {
+  position: absolute;
+  left: 10%;
+  top: 100px;
+  width: 80%;
+  height: 500px;
+  color: rgb(31, 30, 30);
+  background-color: rgb(252, 247, 194);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: auto;
+}
+.moudal div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+  margin: auto;
+}
+.moudal div label {
+  font-weight: bold;
+  margin: 10px 10px;
+}
+.moudal div input {
+  border-radius: 10px;
+  height: 40px;
+  border-style: none;
+  background-color: whitesmoke;
+}
+.moudal div select {
+  border-radius: 10px;
+  height: 40px;
+  border-style: none;
+  background-color: whitesmoke;
+}
+.moudal div button {
+  width: 90%;
+  height: 40px;
+  background-color: rgb(31, 30, 30);
+  color: rgb(252, 247, 194);
+  border-radius: 10px;
+  border-style: none;
+  margin-left: 5%;
+}
+/* moudal */
+
+/* hidden classs */
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+/* hidden classs */
+
+/* listingDivStyle  */
+#mappingList {
+  background-color: whitesmoke;
+  width: 100%;
+}
+
+.listingDivStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  color: rgb(31, 30, 30);
+  background-color: rgb(252, 247, 194);
+  border-radius: 10px;
+  margin: 10px 5%;
+  padding: 5px;
+}
+
+.btnEditAndDelete {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(31, 30, 30);
+  color: rgb(252, 247, 194);
+  border-radius: 10px;
+  border-style: none;
+  margin: 0px 5px;
+}
+
+/* listingDivStyle  */
+
+/* footer */
+.footer {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  width: 90%;
+  height: 150px;
+  background-color: rgb(252, 247, 194);
+  color: rgb(31, 30, 30);
+}
+.footer div {
+  text-align: center;
+}
+.footer h2 {
+  margin-bottom: 10px;
+}
+/* footer */

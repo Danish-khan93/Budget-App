@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUDGET APP</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- heading -->
+    <header class="head">
+      <h1>BUDGET APP</h1>
+    </header>
+    <!-- heading -->
+    <!--enter the budget amount section start  -->
+    <section>
+      <div class="budgetAmount">
+        <input
+          type="number"
+          name=""
+          id="budgetAmountField"
+          placeholder="Enter Total Amount"
+        />
+        <button onclick="setBudegt()">Set Budget</button>
+      </div>
+    </section>
+    <!-- enter the budget amount section end -->
+
+    <!-- add expense Moudal btn -->
+    <div class="openMudalBtn">
+      <button onclick="openMoudal()">Enter the expenss</button>
+    </div>
+
+    <!-- add expense Moudal btn-->
+    <!-- add expense Moudal -->
+    <div class="hidden" id="moudal">
+      <div>
+        <label for="">Date</label>
+        <input type="date" id="eDate" />
+      </div>
+      <div>
+        <label for="">Category</label>
+        <select id="eCategory">
+          <option>select the category</option>
+          <option value="Medical">Medical</option>
+          <option value="Glossary">Glossary</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Utilities Bills">Utilities Bills</option>
+          <option value="Restaurants">Restaurants</option>
+        </select>
+      </div>
+      <div>
+        <label for="">Discription</label>
+        <input type="text" id="eDiscription" />
+      </div>
+      <div>
+        <label for="">Expense Amount</label>
+        <input type="number" id="eAmount" />
+      </div>
+      <div>
+        <button id="btnsub" class="show" onclick="expenxeSubmit()">
+          Submit Expense
+        </button>
+      </div>
+    </div>
+
+    <!-- add expense Moudal -->
+
+    <!-- app info bar  -->
+    <div class="centerInfoSection">
+      <div>
+        <p id="date"></p>
+      </div>
+      <div class="innerCenterInfoSection">
+        <p>Number of transaction:0<span id="noOfTransaction"></span></p>
+        <p>Value:$<span id="upDatedBudget"></span></p>
+      </div>
+    </div>
+    <!-- app info bar  -->
+    <!-- mapping list content -->
+
+    <div id="mappingList"></div>
+
+    <!-- mapping list content -->
+    <!-- app footer  -->
+    <div class="footer">
+      <div>
+        <h2>Total Budget</h2>
+        <h3 id="budgetValue"></h3>
+      </div>
+      <div>
+        <h2>Total Expense</h2>
+        <h3 id="totalExpense"></h3>
+      </div>
+      <div>
+        <h2>Balance</h2>
+        <h3 id="totalBalance"></h3>
+      </div>
+    </div>
+    <!-- app footer  -->
+  </body>
+  <script src="./app.js"></script>
+</html>
