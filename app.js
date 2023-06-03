@@ -100,44 +100,55 @@ function openMoudal() {
 }
 
 // expense submit button function
+
 function expenxeSubmit() {
-  let perExpenseList = new Expense(
-    perExpenseDate.value,
-    perExpenseDiscription.value,
-    perExpenseCategory.value,
-    perExpenseAmount.value
-  );
+  if (
+    perExpenseDate.value == "" &&
+    perExpenseDiscription.value == "" &&
+    perExpenseCategory.value == "" &&
+    perExpenseAmount.value == ""
+  ) {
+    alert("fill all the fields please");
+  } else {
+    let perExpenseList = new Expense(
+      perExpenseDate.value,
+      perExpenseDiscription.value,
+      perExpenseCategory.value,
+      perExpenseAmount.value
+    );
 
-  perExpenseDate.value = "";
-  perExpenseDiscription.value = "";
-  perExpenseCategory.value = "";
-  perExpenseAmount.value = "";
+    perExpenseDate.value = "";
+    perExpenseDiscription.value = "";
+    perExpenseCategory.value = "";
+    perExpenseAmount.value = "";
 
-  totalExpenseList.push(perExpenseList);
+    totalExpenseList.push(perExpenseList);
 
-  // no of transction
-  noOfTransaction.innerText = totalExpenseList.length;
-  // mapping list
+    // no of transction
+    noOfTransaction.innerText = totalExpenseList.length;
+    // mapping list
 
-  makingList();
-  // sun the total expense
-  let expenseSum = totalExpenseList.reduce((total, value) => {
-    return total + Number(value.expenseAmount);
-  }, 0);
-  totalExp.innerText = expenseSum;
-  console.log(expenseSum);
-  // balnce and value
+    makingList();
+    // sun the total expense
+    let expenseSum = totalExpenseList.reduce((total, value) => {
+      return total + Number(value.expenseAmount);
+    }, 0);
+    totalExp.innerText = expenseSum;
+    console.log(expenseSum);
+    // balnce and value
 
-  upDatedBudgetValue.innerText = Number(budgetSetAmount.innerText) - expenseSum;
-  totalBal.innerText = Number(budgetSetAmount.innerText) - expenseSum;
-  if (expenseSum > Number(budgetSetAmount.innerText)) {
-    alert("your expense is exceed ");
+    upDatedBudgetValue.innerText =
+      Number(budgetSetAmount.innerText) - expenseSum;
+    totalBal.innerText = Number(budgetSetAmount.innerText) - expenseSum;
+    if (Number(budgetSetAmount.innerText) < expenseSum) {
+      alert("your expense is exceed ");
+    }
+    // moudal Off
+    if (moudal.className === "moudal") {
+      moudal.className = "hidden";
+    }
+    console.log(totalExpenseList);
   }
-  // moudal Off
-  if (moudal.className === "moudal") {
-    moudal.className = "hidden";
-  }
-  console.log(totalExpenseList);
 }
 
 // delete btn function
