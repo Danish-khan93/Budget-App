@@ -127,8 +127,12 @@ function expenxeSubmit() {
   totalExp.innerText = expenseSum;
   console.log(expenseSum);
   // balnce and value
+
   upDatedBudgetValue.innerText = Number(budgetSetAmount.innerText) - expenseSum;
   totalBal.innerText = Number(budgetSetAmount.innerText) - expenseSum;
+  if (expenseSum > Number(budgetSetAmount.innerText)) {
+    alert("your expense is exceed ");
+  }
   // moudal Off
   if (moudal.className === "moudal") {
     moudal.className = "hidden";

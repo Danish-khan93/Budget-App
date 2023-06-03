@@ -19,6 +19,7 @@
         <input
           type="number"
           name=""
+          required
           id="budgetAmountField"
           placeholder="Enter Total Amount"
         />
@@ -29,7 +30,7 @@
 
     <!-- add expense Moudal btn -->
     <div class="openMudalBtn">
-      <button onclick="openMoudal()">Enter the expenss</button>
+      <button onclick="openMoudal()">Enter the expenes</button>
     </div>
 
     <!-- add expense Moudal btn-->
@@ -37,26 +38,27 @@
     <div class="hidden" id="moudal">
       <div>
         <label for="">Date</label>
-        <input type="date" id="eDate" />
+        <input type="date" id="eDate" required />
       </div>
       <div>
         <label for="">Category</label>
-        <select id="eCategory">
+        <select required id="eCategory">
           <option>select the category</option>
           <option value="Medical">Medical</option>
           <option value="Glossary">Glossary</option>
           <option value="Transportation">Transportation</option>
           <option value="Utilities Bills">Utilities Bills</option>
           <option value="Restaurants">Restaurants</option>
+          <option value="Restaurants">Other Expense</option>
         </select>
       </div>
       <div>
-        <label for="">Discription</label>
-        <input type="text" id="eDiscription" />
+        <label for="">Description</label>
+        <input type="text" id="eDiscription" required />
       </div>
       <div>
         <label for="">Expense Amount</label>
-        <input type="number" id="eAmount" />
+        <input type="number" id="eAmount" required />
       </div>
       <div>
         <button id="btnsub" class="show" onclick="expenxeSubmit()">
