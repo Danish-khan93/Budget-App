@@ -33,13 +33,14 @@ let perExpenseAmount = document.getElementById("eAmount");
 let budgetAmount = document.getElementById("budgetAmountField");
 // setbudget button function
 const setBudegt = () => {
-  if (budgetAmount) {
-    budgetSetAmount.innerText = Number(budgetAmount.value);
-    upDatedBudgetValue.innerText = Number(budgetSetAmount.innerText);
-    console.log(budgetSetAmount.innerText);
+  if (budgetAmount.value <= 0) {
+    alert("enter the correct figure of your budget");
     budgetAmount.value = 0;
   } else {
-    alert("enter the number only");
+    budgetSetAmount.innerText = Number(budgetAmount.value);
+    upDatedBudgetValue.innerText = Number(budgetSetAmount.innerText);
+    budgetAmount.value = "";
+    console.log(budgetSetAmount.innerText);
   }
 };
 // setbudget button function
@@ -94,7 +95,9 @@ function makingList() {
 
 // open modual on btn click
 function openMoudal() {
-  moudal.className === "hidden"
+  budgetSetAmount.innerText === ""
+    ? alert("set the budget first")
+    : moudal.className === "hidden"
     ? (moudal.className = "moudal")
     : (moudal.className = "hidden");
 }
@@ -105,8 +108,8 @@ function expenxeSubmit() {
   if (
     perExpenseDate.value == "" &&
     perExpenseDiscription.value == "" &&
-    perExpenseCategory.value == "" &&
-    perExpenseAmount.value == ""
+    perExpenseCategory.value == "select the category" &&
+    perExpenseAmount.value == 0
   ) {
     alert("fill all the fields please");
   } else {
